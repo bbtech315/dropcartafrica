@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - DropCart Africa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://placehold.co/40x40/3498db/ffffff?text=DC" alt="DropCart Africa Logo">
+                <span class="logo-text">DropCart Africa</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="shop-dropdown-toggle">Shop <i class="fas fa-chevron-down"></i></a>
+                    <ul class="shop-dropdown">
+                        <li><a href="#" data-category="all">All Products</a></li>
+                        <li><a href="#" data-category="Electronics">Electronics</a></li>
+                        <li><a href="#" data-category="Fashion">Fashion</a></li>
+                        <li><a href="#" data-category="Beauty">Beauty & Health</a></li>
+                        <li><a href="#" data-category="Home">Home & Living</a></li>
+                        <li><a href="#" data-category="Office">Office & School</a></li>
+                        <li><a href="#" data-category="Automobile">Automobile</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#vendor">Vendor</a></li>
+                <li><a href="index.html#reseller">Reseller</a></li>
+                <li><a href="index.html#support">Support</a></li>
+                <li><a href="#" class="login-btn" onclick="openLoginModal()">Login</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="shop-page">
+        <div class="container">
+            <div class="shop-header">
+                <h1>Shop All Products</h1>
+                <p>Discover amazing products from verified vendors across Africa</p>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="shop-controls">
+                <div class="search-container">
+                    <input type="text" id="product-search" placeholder="Search products...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-container">
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Beauty">Beauty & Health</option>
+                        <option value="Home">Home & Living</option>
+                        <option value="Office">Office & School</option>
+                        <option value="Automobile">Automobile</option>
+                    </select>
+                    <select id="price-filter">
+                        <option value="all">All Prices</option>
+                        <option value="0-10000">Under ₦10,000</option>
+                        <option value="10000-50000">₦10,000 - ₦50,000</option>
+                        <option value="50000-100000">₦50,000 - ₦100,000</option>
+                        <option value="100000+">Above ₦100,000</option>
+                    </select>
+                    <select id="sort-filter">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-container">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn btn-secondary" id="load-more-btn">Load More Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <div class="login-form-container">
+                <div class="login-tabs">
+                    <button class="login-tab-btn active" data-tab="login">Login</button>
+                    <button class="login-tab-btn" data-tab="register">Register</button>
+                    <button class="login-tab-btn" data-tab="forgot">Forgot Password</button>
+                </div>
+                
+                <!-- Login Form -->
+                <div class="login-tab-content active" id="login-tab">
+                    <h2>Welcome Back</h2>
+                    <form id="login-form" onsubmit="authManager.handleLogin(event)">
+                        <div class="form-group">
+                            <label for="login-email-phone">Email or Phone Number</label>
+                            <input type="text" id="login-email-phone" name="emailPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <div class="password-input-container">
+                                <input type="password" id="login-password" name="password" required>
+                                <button type="button" class="password-toggle" onclick="authManager.togglePassword('login-password')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="captcha-container">
+                            <div class="captcha-display" id="login-captcha-display">A3B7K</div>
+                            <button type="button" class="captcha-refresh" onclick="authManager.refreshCaptcha('login-captcha-display')">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-captcha">Enter CAPTCHA</label>
+                            <input type="text" id="login-captcha" name="captcha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                
+                <!-- Register Form -->
+                <div class="login-tab-content" id="register-tab">
+                    <h2>Create Account</h2>
+                    <form id="register-form" onsubmit="authManager.handleRegister(event)">
+                        <div class="form-group">
+                            <label for="register-name">Full Name</label>
+                            <input type="text" id="register-name" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email">Email Address</label>
+                            <input type="email" id="register-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-phone">Phone Number</label>
+                            <input type="tel" id="register-phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-user-type">Account Type</label>
+                            <select id="register-user-type" name="userType" required>
+                                <option value="">Select Account Type</option>
+                                <option value="buyer">Buyer</option>
+                                <option value="vendor">Vendor</option>
+                                <option value="reseller">Reseller</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <div class="password-input-container">
+                                <input type="password" id="register-password" name="password" required>
+                                <button type="button" class="password-toggle" onclick="authManager.togglePassword('register-password')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-confirm-password">Confirm Password</label>
+                            <div class="password-input-container">
+                                <input type="password" id="register-confirm-password" name="confirmPassword" required>
+                                <button type="button" class="password-toggle" onclick="authManager.togglePassword('register-confirm-password')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="captcha-container">
+                            <div class="captcha-display" id="register-captcha-display">B9X2M</div>
+                            <button type="button" class="captcha-refresh" onclick="authManager.refreshCaptcha('register-captcha-display')">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-captcha">Enter CAPTCHA</label>
+                            <input type="text" id="register-captcha" name="captcha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+                
+                <!-- Forgot Password Form -->
+                <div class="login-tab-content" id="forgot-tab">
+                    <h2>Reset Password</h2>
+                    <form id="forgot-form" onsubmit="authManager.handleForgotPassword(event)">
+                        <div class="form-group">
+                            <label for="forgot-email-phone">Email or Phone Number</label>
+                            <input type="text" id="forgot-email-phone" name="emailPhone" required>
+                        </div>
+                        <div class="captcha-container">
+                            <div class="captcha-display" id="forgot-captcha-display">C5Y8N</div>
+                            <button type="button" class="captcha-refresh" onclick="authManager.refreshCaptcha('forgot-captcha-display')">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label for="forgot-captcha">Enter CAPTCHA</label>
+                            <input type="text" id="forgot-captcha" name="captcha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Reset Link</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="https://placehold.co/40x40/3498db/ffffff?text=DC" alt="DropCart Africa Logo">
+                        <span class="logo-text">DropCart Africa</span>
+                    </div>
+                    <p>Your trusted marketplace for quality products across Africa.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="index.html#vendor">Become a Vendor</a></li>
+                        <li><a href="index.html#reseller">Become a Reseller</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DropCart Africa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- OTP Verification Modal -->
+    <div id="otpModal" class="modal otp-modal">
+        <div class="modal-content">
+            <span class="close" onclick="authManager.closeOtpModal()">&times;</span>
+            <div class="otp-verification">
+                <h2>Verify Your Account</h2>
+                <p id="otp-message">We've sent a 6-digit verification code to your email/phone.</p>
+                <div class="otp-input-container">
+                    <input type="text" id="otp-input" placeholder="Enter 6-digit code" maxlength="6" pattern="[0-9]{6}">
+                </div>
+                <div class="otp-actions">
+                    <button type="button" class="btn btn-primary" onclick="authManager.verifyOtp()">Verify</button>
+                    <button type="button" class="btn btn-secondary" onclick="authManager.resendOtp()">Resend Code</button>
+                </div>
+                <div class="otp-timer" id="otp-timer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="script.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

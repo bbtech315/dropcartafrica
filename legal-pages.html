@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropCart Africa - Legal Pages</title>
+    <meta name="description" content="Legal information for DropCart Africa users including terms for buyers, vendors, resellers, and privacy policy.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .legal-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .legal-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .legal-nav a {
+            padding: 10px 15px;
+            background-color: var(--gray-light);
+            border-radius: var(--border-radius);
+            color: var(--text-color);
+        }
+        
+        .legal-nav a.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .legal-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .legal-section.active {
+            display: block;
+        }
+        
+        .legal-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .legal-section p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .legal-section ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .legal-section li {
+            margin-bottom: 10px;
+            list-style-type: disc;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 30px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.svg" alt="DropCart Africa Logo">
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#shop">Shop</a></li>
+                <li><a href="index.html#buyer-form">Order Now</a></li>
+                <li><a href="index.html#vendor">Become a Vendor</a></li>
+                <li><a href="index.html#referral">Referrals</a></li>
+                <li><a href="index.html#delivery">Delivery</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#login" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="legal-container">
+        <div class="legal-nav">
+            <a href="#buyers" class="legal-tab active" data-target="buyers-terms">Terms for Buyers</a>
+            <a href="#vendors" class="legal-tab" data-target="vendors-terms">Terms for Vendors</a>
+            <a href="#resellers" class="legal-tab" data-target="resellers-terms">Terms for Resellers</a>
+            <a href="#privacy" class="legal-tab" data-target="privacy-policy">Privacy Policy</a>
+        </div>
+        
+        <div class="legal-content">
+            <!-- Terms for Buyers -->
+            <div id="buyers-terms" class="legal-section active">
+                <h2>Terms for Buyers</h2>
+                <p>By using DropCart Africa, buyers agree to the following terms and conditions:</p>
+                
+                <ul>
+                    <li><strong>Accurate Information:</strong> Provide accurate details (name, phone, address, landmark) for successful order delivery.</li>
+                    <li><strong>Payment Terms:</strong> Pay for products upon delivery unless otherwise stated in specific product listings.</li>
+                    <li><strong>Inspection:</strong> Inspect goods at the point of delivery and report any issues within 24 hours.</li>
+                    <li><strong>Price Changes:</strong> Understand that product prices and availability may change without prior notice.</li>
+                    <li><strong>Referral Codes:</strong> Use referral codes responsibly. Any fraudulent use may lead to account suspension.</li>
+                    <li><strong>Order Cancellation:</strong> Orders can be cancelled within 12 hours of placement. After this period, cancellation may incur a fee.</li>
+                    <li><strong>Return Policy:</strong> Products can be returned within 7 days if they are defective or significantly different from their description.</li>
+                    <li><strong>Communication:</strong> Maintain a valid phone number for delivery coordination and updates.</li>
+                    <li><strong>Account Security:</strong> Maintain the security of your account credentials and notify us immediately of any unauthorized use.</li>
+                </ul>
+                
+                <p>These terms are subject to change. Continued use of our services after changes constitutes acceptance of the updated terms.</p>
+            </div>
+            
+            <!-- Terms for Vendors -->
+            <div id="vendors-terms" class="legal-section">
+                <h2>Terms for Vendors</h2>
+                <p>Vendors on DropCart Africa agree to the following terms and conditions:</p>
+                
+                <ul>
+                    <li><strong>Accurate Information:</strong> Submit accurate business and product information during registration.</li>
+                    <li><strong>Product Standards:</strong> Ensure all products comply with Nigerian and international standards.</li>
+                    <li><strong>Admin Approval:</strong> Accept that all products must be admin-approved before going live on the platform.</li>
+                    <li><strong>Logistics:</strong> Deliver products promptly to DropCart Africa's logistics partners when required.</li>
+                    <li><strong>Prohibited Items:</strong> Avoid listing counterfeit, illegal, or harmful products. Violations will lead to termination.</li>
+                    <li><strong>Commission Structure:</strong> Agree to the platform's commission structure for each sale.</li>
+                    <li><strong>Product Accuracy:</strong> Ensure product descriptions, images, and specifications accurately represent the actual items.</li>
+                    <li><strong>Inventory Management:</strong> Maintain accurate inventory levels and promptly update product availability.</li>
+                    <li><strong>Customer Service:</strong> Respond to customer inquiries and complaints in a timely and professional manner.</li>
+                    <li><strong>Account Termination:</strong> Understand that DropCart Africa reserves the right to terminate vendor accounts for violations of these terms.</li>
+                </ul>
+                
+                <p>These terms are subject to change. Continued use of our services after changes constitutes acceptance of the updated terms.</p>
+            </div>
+            
+            <!-- Terms for Resellers -->
+            <div id="resellers-terms" class="legal-section">
+                <h2>Terms for Resellers (Referral Agents)</h2>
+                <p>Resellers on DropCart Africa agree to the following terms and conditions:</p>
+                
+                <ul>
+                    <li><strong>Referral Codes:</strong> Share only their unique referral code for promotions.</li>
+                    <li><strong>Commission Eligibility:</strong> Earn commissions solely on valid purchases made through their referral link/code.</li>
+                    <li><strong>Ethical Practices:</strong> Not manipulate orders or engage in self-purchases to inflate commissions.</li>
+                    <li><strong>Commission Tracking:</strong> Accept that commissions are calculated automatically and visible in their dashboard.</li>
+                    <li><strong>Payment Methods:</strong> Withdraw earnings only through official company-approved payment methods.</li>
+                    <li><strong>Representation:</strong> Not misrepresent themselves as employees or official representatives of DropCart Africa.</li>
+                    <li><strong>Marketing Materials:</strong> Use only approved marketing materials and make no false claims about products or services.</li>
+                    <li><strong>Minimum Withdrawal:</strong> Understand that commission withdrawals are subject to minimum amount requirements.</li>
+                    <li><strong>Commission Rates:</strong> Accept that commission rates may vary by product category and are subject to change.</li>
+                    <li><strong>Account Termination:</strong> Understand that DropCart Africa reserves the right to terminate reseller accounts for violations of these terms.</li>
+                </ul>
+                
+                <p>These terms are subject to change. Continued use of our services after changes constitutes acceptance of the updated terms.</p>
+            </div>
+            
+            <!-- Privacy Policy -->
+            <div id="privacy-policy" class="legal-section">
+                <h2>Privacy Policy</h2>
+                <p>DropCart Africa values your privacy. This policy outlines how we collect, use, and protect your personal information.</p>
+                
+                <h3>Information Collection</h3>
+                <p>We collect buyer, vendor, and reseller information only for order fulfillment, communication, and account management. This includes:</p>
+                <ul>
+                    <li>Contact information (name, email, phone number)</li>
+                    <li>Delivery addresses and landmarks</li>
+                    <li>Payment information</li>
+                    <li>Order history and preferences</li>
+                    <li>Business information for vendors</li>
+                </ul>
+                
+                <h3>Information Usage</h3>
+                <p>We use your information to:</p>
+                <ul>
+                    <li>Process and fulfill orders</li>
+                    <li>Communicate about order status and updates</li>
+                    <li>Improve our services and user experience</li>
+                    <li>Manage vendor and reseller accounts</li>
+                    <li>Track referrals and commissions</li>
+                </ul>
+                
+                <h3>Information Sharing</h3>
+                <p>We do not sell or rent your personal data to third parties. We only share information with:</p>
+                <ul>
+                    <li>Trusted logistics partners for delivery purposes</li>
+                    <li>Payment processors for transaction handling</li>
+                    <li>Legal authorities when required by law</li>
+                </ul>
+                
+                <h3>Data Security</h3>
+                <p>We implement appropriate security measures to protect your information from unauthorized access, alteration, or disclosure.</p>
+                
+                <h3>Cookies</h3>
+                <p>We use cookies to improve site performance and user experience. You can control cookie settings through your browser preferences.</p>
+                
+                <h3>User Rights</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your personal data</li>
+                    <li>Correct inaccurate information</li>
+                    <li>Request deletion of your data</li>
+                    <li>Opt out of marketing communications</li>
+                </ul>
+                
+                <h3>Contact Us</h3>
+                <p>For privacy-related inquiries or to exercise your rights, please contact our support team at support@dropcartafrica.com.</p>
+                
+                <p>This privacy policy is subject to change. We will notify users of significant changes through our website or email.</p>
+            </div>
+        </div>
+        
+        <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About DropCart Africa</h3>
+                <p>DropCart Africa is a dropshipping marketplace powered by BB Technology & General Contract Ltd. Our mission is to connect African buyers with quality products and empower entrepreneurs through our platform.</p>
+                <p class="motto">Motto: Safe. Simple. Rewarding.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp Support: +2347031031130</p>
+                    <p><i class="fas fa-phone"></i> Call Us: 07075607044</p>
+                    <p><i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/DropCartAfrica" target="_blank">@DropCartAfrica</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: support@dropcartafrica.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/dropcartafrica" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@no1_african_product_hub?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://t.me/DropCartAfrica" target="_blank"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                    <li><a href="index.html#vendor">Become a Vendor</a></li>
+                    <li><a href="index.html#referral">Referral Program</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section legal">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="legal-pages.html#buyers">Terms for Buyers</a></li>
+                    <li><a href="legal-pages.html#vendors">Terms for Vendors</a></li>
+                    <li><a href="legal-pages.html#resellers">Terms for Resellers</a></li>
+                    <li><a href="legal-pages.html#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 DropCart Africa. All rights reserved. Powered by BB Technology & General Contract Ltd.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp CTA Button -->
+    <div class="whatsapp-cta">
+        <a href="https://wa.me/+2347031031130" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat Us Now</span>
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.legal-tab');
+            const sections = document.querySelectorAll('.legal-section');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all tabs and sections
+                    tabs.forEach(t => t.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+            
+            // Handle hash in URL
+            if (window.location.hash) {
+                const hash = window.location.hash.substring(1);
+                const targetTab = document.querySelector(`.legal-tab[data-target="${hash}-terms"]`) || 
+                                document.querySelector(`.legal-tab[data-target="${hash}-policy"]`);
+                if (targetTab) {
+                    targetTab.click();
+                }
+            }
+            
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            // Close mobile menu when clicking on a link
+            const navItems = document.querySelectorAll('.nav-links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

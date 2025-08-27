@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropCart Africa - Africa's Dropshipping Marketplace</title>
+    <meta name="description" content="Shop, Sell, and Earn with ease on DropCart Africa, Africa's premier dropshipping marketplace powered by BB Technology & General Contract Ltd.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.svg" alt="DropCart Africa Logo">
+                <span class="logo-text">DropCart Africa</span>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#shop">Shop Now</a></li>
+                <li><a href="#vendor">Become a Vendor</a></li>
+                <li><a href="#referral">Referrals</a></li>
+                <li><a href="#delivery">Delivery</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login" class="login-btn"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>DropCart Africa – Africa's Dropshipping Marketplace</h1>
+            <p>Shop, Sell, and Earn with ease.</p>
+            <div class="cta-buttons">
+                <a href="#shop" class="btn btn-primary">Shop Now</a>
+                <a href="#vendor" class="btn btn-secondary">Become a Vendor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop Our Products</h2>
+                <p>Discover quality products at affordable prices</p>
+            </div>
+            
+            <!-- Flash Sales Banner -->
+            <div class="flash-sale-banner">
+                <div class="flash-sale-content">
+                    <div class="flash-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Flash Sales</h3>
+                    <p>Limited-time offers on trending products!</p>
+                    <div class="countdown" id="flash-sale-countdown">
+                        <div class="countdown-item">
+                            <span id="countdown-hours">24</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="countdown-minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="countdown-seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                    <a href="shop.html" class="btn btn-flash">Shop Now</a>
+                </div>
+            </div>
+            
+            <div class="shop-categories">
+                <!-- Original Categories -->
+                <div class="category" data-aos="fade-up">
+                    <img src="https://placehold.co/150x150/e74c3c/ffffff?text=Food" alt="Food & Groceries">
+                    <h3>Food & Groceries</h3>
+                    <p>Fresh and packaged food items</p>
+                </div>
+                <div class="category" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://placehold.co/150x150/3498db/ffffff?text=Beauty" alt="Health & Beauty">
+                    <h3>Health & Beauty</h3>
+                    <p>Skincare, hair care, wellness gadgets</p>
+                </div>
+                <div class="category" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://placehold.co/150x150/2ecc71/ffffff?text=Home" alt="Home & Living">
+                    <h3>Home & Living</h3>
+                    <p>Kitchen appliances, LED lamps, storage</p>
+                </div>
+                <div class="category" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://placehold.co/150x150/9b59b6/ffffff?text=Fashion" alt="Fashion & Accessories">
+                    <h3>Fashion & Accessories</h3>
+                    <p>Unisex footwear, bags, jewelry</p>
+                </div>
+                
+                <!-- New Categories -->
+                <div class="category" data-aos="fade-up">
+                    <img src="https://placehold.co/150x150/f39c12/ffffff?text=Tech" alt="Electronics & Gadgets">
+                    <h3>Electronics & Gadgets</h3>
+                    <p>Phones, smartwatches, earbuds, speakers</p>
+                </div>
+                <div class="category" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://placehold.co/150x150/34495e/ffffff?text=Auto" alt="Automobile Accessories">
+                    <h3>Automobile Accessories</h3>
+                    <p>Car pumps, electric jacks, cleaning kits</p>
+                </div>
+                <div class="category" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://placehold.co/150x150/1abc9c/ffffff?text=Kids" alt="Kids & Baby">
+                    <h3>Kids & Baby</h3>
+                    <p>Toys, clothing, educational tools</p>
+                </div>
+                <div class="category" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://placehold.co/150x150/8e44ad/ffffff?text=Office" alt="Office & School">
+                    <h3>Office & School</h3>
+                    <p>Stationery, laptops, backpacks, printers</p>
+                </div>
+            </div>
+            
+            <!-- Featured Categories Grid -->
+            <div class="featured-categories-section">
+                <div class="section-header">
+                    <h2>Featured Categories</h2>
+                    <p>Explore our curated collections</p>
+                </div>
+                <div class="featured-categories-grid">
+                    <div class="featured-category" data-aos="zoom-in">
+                        <img src="https://placehold.co/600x400/e74c3c/ffffff?text=Electronics" alt="Electronics">
+                        <div class="featured-category-content">
+                            <h3>Electronics</h3>
+                            <p>Latest gadgets and tech accessories</p>
+                            <a href="#shop" class="btn btn-sm">Explore</a>
+                        </div>
+                    </div>
+                    <div class="featured-category" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="https://placehold.co/600x400/3498db/ffffff?text=Fashion" alt="Fashion">
+                        <div class="featured-category-content">
+                            <h3>Fashion</h3>
+                            <p>Trending styles for all seasons</p>
+                            <a href="#shop" class="btn btn-sm">Explore</a>
+                        </div>
+                    </div>
+                    <div class="featured-category" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="https://placehold.co/600x400/2ecc71/ffffff?text=Home" alt="Home & Living">
+                        <div class="featured-category-content">
+                            <h3>Home & Living</h3>
+                            <p>Essentials for modern living</p>
+                            <a href="#shop" class="btn btn-sm">Explore</a>
+                        </div>
+                    </div>
+                    <div class="featured-category" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="https://placehold.co/600x400/f39c12/ffffff?text=Beauty" alt="Beauty & Health">
+                        <div class="featured-category-content">
+                            <h3>Beauty & Health</h3>
+                            <p>Self-care and wellness products</p>
+                            <a href="#shop" class="btn btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dropshipping Bestsellers -->
+            <div class="bestsellers-section">
+                <div class="section-header">
+                    <h2>Dropshipping Bestsellers</h2>
+                    <p>Auto-updating list of trending products</p>
+                </div>
+                <div class="bestsellers-carousel" id="bestsellers-carousel">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+            </div>
+            
+            <div class="shop-cta">
+                <a href="#shop" class="btn btn-primary">Continue Shopping</a>
+                <a href="#buyer-form" class="btn btn-secondary">Checkout</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buyer Form Section -->
+    <section id="buyer-form" class="buyer-form-section">
+        <div class="section-header">
+            <h2>Checkout</h2>
+            <p>Review your cart and complete your purchase</p>
+        </div>
+        <div class="form-container">
+            <div class="checkout-cart-summary">
+                <h3>Order Summary</h3>
+                <div id="checkout-items"></div>
+                <div class="checkout-total">
+                    <span>Total:</span>
+                    <span id="checkout-total-amount">₦0.00</span>
+                </div>
+            </div>
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="altNumber">Alternative Number</label>
+                    <input type="tel" id="altNumber" name="altNumber">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="landmark">Landmark</label>
+                    <input type="text" id="landmark" name="landmark" required>
+                </div>
+                <div class="form-group">
+                    <label for="deliveryDay">Preferred Delivery Day</label>
+                    <select id="deliveryDay" name="deliveryDay" required>
+                        <option value="">Select a day</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                    </select>
+                </div>
+                <div class="form-group toggle-group">
+                    <label>Ready to Buy</label>
+                    <div class="toggle-container">
+                        <input type="checkbox" id="readyToBuy" name="readyToBuy">
+                        <label for="readyToBuy" class="toggle-label"></label>
+                        <span id="toggle-status">No</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Order</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Vendor Registration Section -->
+    <section id="vendor" class="vendor-section">
+        <div class="section-header">
+            <h2>Become a Vendor</h2>
+            <p>Start selling your products on DropCart Africa</p>
+        </div>
+        <div class="form-container">
+            <form id="vendor-form">
+                <div class="form-group">
+                    <label for="businessName">Business Name</label>
+                    <input type="text" id="businessName" name="businessName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactName">Contact Person</label>
+                    <input type="text" id="contactName" name="contactName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactPhone">Phone Number</label>
+                    <input type="tel" id="contactPhone" name="contactPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="productCategory">Product Category</label>
+                    <select id="productCategory" name="productCategory" required>
+                        <option value="">Select a category</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion & Clothing</option>
+                        <option value="beauty">Beauty & Personal Care</option>
+                        <option value="home">Home & Kitchen</option>
+                        <option value="health">Health & Wellness</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">Brief Description of Products</label>
+                    <textarea id="productDescription" name="productDescription" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-secondary">Register as Vendor</button>
+            </form>
+        </div>
+        <div class="verification-info">
+            <h3>Verification Process</h3>
+            <p>All vendors undergo a verification process to ensure quality and authenticity. Once your application is submitted, our team will review your details and contact you within 48 hours.</p>
+            <p>Approved vendors can list products, manage inventory, and track sales through our vendor dashboard.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real experiences from our satisfied customers</p>
+            </div>
+            <div class="testimonials-carousel" data-aos="fade-up">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"DropCart Africa has transformed my online shopping experience. The products are high-quality and delivery is always on time. I've recommended it to all my friends!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/100x100/9b59b6/ffffff?text=A" alt="Adebayo O.">
+                        <div class="author-info">
+                            <h4>Adebayo O.</h4>
+                            <p>Lagos, Nigeria</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a vendor on DropCart Africa, I've seen my business grow exponentially. The platform is user-friendly and the support team is always available to help."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/100x100/3498db/ffffff?text=C" alt="Chioma N.">
+                        <div class="author-info">
+                            <h4>Chioma N.</h4>
+                            <p>Abuja, Nigeria</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The referral program is amazing! I've earned substantial commissions just by sharing products with my network. DropCart Africa has become a reliable source of income for me."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/100x100/e74c3c/ffffff?text=T" alt="Tunde A.">
+                        <div class="author-info">
+                            <h4>Tunde A.</h4>
+                            <p>Port Harcourt, Nigeria</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-video" data-aos="zoom-in">
+                <h3>Watch Customer Stories</h3>
+                <div class="video-container">
+                    <img src="https://placehold.co/800x450/34495e/ffffff?text=Customer+Testimonial+Video" alt="Customer Testimonial Video">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral & Reseller Program Section -->
+    <section id="referral" class="referral-section">
+        <div class="section-header">
+            <h2>Referral & Reseller Program</h2>
+            <p>Earn commission by referring buyers and reselling products</p>
+        </div>
+        <div class="referral-content">
+            <div class="referral-info">
+                <h3>How It Works</h3>
+                <p>As a DropCart Africa user, you automatically qualify for our referral program. Share your unique referral code with friends, family, and followers. When they make a purchase using your code, you earn commission!</p>
+                <ul class="referral-steps">
+                    <li><i class="fas fa-user-plus"></i> Register and get your unique referral code</li>
+                    <li><i class="fas fa-share-alt"></i> Share your code with potential buyers</li>
+                    <li><i class="fas fa-shopping-cart"></i> Earn commission when they make purchases</li>
+                    <li><i class="fas fa-money-bill-wave"></i> Withdraw your earnings or use as store credit</li>
+                </ul>
+            </div>
+            <div class="commission-dashboard">
+                <h3>Earnings & Commission Dashboard</h3>
+                <div class="dashboard-preview">
+                    <div class="dashboard-card">
+                        <h4>Total Referrals</h4>
+                        <p class="dashboard-value">0</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h4>Successful Orders</h4>
+                        <p class="dashboard-value">0</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h4>Commission Earned</h4>
+                        <p class="dashboard-value">₦0.00</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h4>Available Balance</h4>
+                        <p class="dashboard-value">₦0.00</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary">Get Your Referral Code</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery & Tracking Section -->
+    <section id="delivery" class="delivery-section">
+        <div class="section-header">
+            <h2>Delivery & Tracking</h2>
+            <p>Monitor your order status in real-time</p>
+        </div>
+        <div class="delivery-content">
+            <div class="tracking-info">
+                <h3>Track Your Order</h3>
+                <p>DropCart Africa provides real-time tracking for all orders. You can track your delivery status manually by entering your order ID or automatically through notifications.</p>
+                <div class="tracking-form">
+                    <input type="text" id="order-id" placeholder="Enter your Order ID">
+                    <button class="btn btn-primary">Track Order</button>
+                </div>
+            </div>
+            <div class="delivery-process">
+                <h3>Delivery Process</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <div class="step-content">
+                            <h4>Order Confirmed</h4>
+                            <p>Your order has been received and confirmed</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-box"></i></div>
+                        <div class="step-content">
+                            <h4>Processing</h4>
+                            <p>Your order is being prepared for shipping</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-shipping-fast"></i></div>
+                        <div class="step-content">
+                            <h4>In Transit</h4>
+                            <p>Your order is on its way to you</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon"><i class="fas fa-home"></i></div>
+                        <div class="step-content">
+                            <h4>Delivered</h4>
+                            <p>Your order has been delivered successfully</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notifications Section -->
+    <section id="notifications" class="notifications-section">
+        <div class="section-header">
+            <h2>Notifications</h2>
+            <p>Stay updated on your orders and activities</p>
+        </div>
+        <div class="notifications-content">
+            <div class="notification-info">
+                <i class="fas fa-bell notification-icon"></i>
+                <p>You'll get alerts when your product is prepared and ready for dispatch. We'll keep you informed at every step of the delivery process.</p>
+            </div>
+            <div class="notification-types">
+                <div class="notification-type">
+                    <i class="fas fa-sms"></i>
+                    <h4>SMS Alerts</h4>
+                    <p>Receive text messages about your order status</p>
+                </div>
+                <div class="notification-type">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email Updates</h4>
+                    <p>Get detailed updates via email</p>
+                </div>
+                <div class="notification-type">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp Notifications</h4>
+                    <p>Instant updates through WhatsApp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Users Say</h2>
+                <p>Success stories from our community</p>
+            </div>
+            <div class="testimonials-carousel" id="testimonials-carousel">
+                <!-- Testimonials will be dynamically loaded here -->
+            </div>
+            <div class="testimonial-indicators">
+                <span class="testimonial-dot active" data-index="0"></span>
+                <span class="testimonial-dot" data-index="1"></span>
+                <span class="testimonial-dot" data-index="2"></span>
+                <span class="testimonial-dot" data-index="3"></span>
+                <span class="testimonial-dot" data-index="4"></span>
+            </div>
+            <div class="testimonials-cta">
+                <p>Join thousands of happy buyers & vendors today.</p>
+                <div class="cta-buttons">
+                    <a href="#buyer-form" class="btn btn-primary">Start Shopping</a>
+                    <a href="#vendor" class="btn btn-secondary">Become a Vendor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Updates</h2>
+                <p>Stay informed with our latest news and tips</p>
+            </div>
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <div class="blog-image">
+                        <img src="https://placehold.co/300x200" alt="Blog Post 1">
+                    </div>
+                    <div class="blog-content">
+                        <h3>How to Start Your Dropshipping Business</h3>
+                        <p class="blog-date"><i class="far fa-calendar-alt"></i> August 15, 2023</p>
+                        <p>Learn the essential steps to launch your successful dropshipping business with DropCart Africa.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-image">
+                        <img src="https://placehold.co/300x200" alt="Blog Post 2">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Top 10 Products to Sell in 2023</h3>
+                        <p class="blog-date"><i class="far fa-calendar-alt"></i> August 10, 2023</p>
+                        <p>Discover the trending products that are generating high profits for dropshippers this year.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-image">
+                        <img src="https://placehold.co/300x200" alt="Blog Post 3">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Maximizing Your Referral Earnings</h3>
+                        <p class="blog-date"><i class="far fa-calendar-alt"></i> August 5, 2023</p>
+                        <p>Tips and strategies to increase your commission as a DropCart Africa referral partner.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-cta">
+                <a href="#" class="btn btn-secondary">View All Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram Chatbot Widget -->
+    <div class="telegram-chatbot-widget" id="telegram-chatbot">
+        <div class="chatbot-button">
+            <i class="fab fa-telegram"></i>
+        </div>
+        <div class="chatbot-popup">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <i class="fab fa-telegram"></i>
+                    <span>DropCart Africa Support</span>
+                </div>
+                <button class="chatbot-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chatbot-body">
+                <div class="chatbot-message bot">
+                    <div class="message-content">
+                        <p>Hi, welcome to DropCart Africa Support! How can I help you today?</p>
+                    </div>
+                </div>
+                <div class="chatbot-quick-replies">
+                    <button class="quick-reply-btn" data-action="buy">Buy Now</button>
+                    <button class="quick-reply-btn" data-action="passing">Passing Bye</button>
+                    <button class="quick-reply-btn" data-action="reseller">Reseller</button>
+                    <button class="quick-reply-btn" data-action="product">Product Details</button>
+                    <button class="quick-reply-btn" data-action="agent">Speak to Human Agent</button>
+                </div>
+                <div class="chatbot-input-container">
+                    <input type="text" class="chatbot-input" placeholder="Type your message...">
+                    <button class="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="DropCart Africa Logo" width="150">
+                    <p>Safe. Simple. Rewarding.</p>
+                </div>
+                <p>DropCart Africa is a dropshipping marketplace powered by BB Technology & General Contract Ltd. Our mission is to connect African buyers with quality products and empower entrepreneurs through our platform.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp Support: +2347031031130</p>
+                    <p><i class="fas fa-phone"></i> Call Us: 07075607044</p>
+                    <p><i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/DropCartAfrica" target="_blank">@DropCartAfrica</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: support@dropcartafrica.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/dropcartafrica" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@no1_african_product_hub?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://t.me/DropCartAfrica" target="_blank"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#vendor">Become a Vendor</a></li>
+                    <li><a href="#referral">Referral Program</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section legal">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="legal-pages.html#buyers">Terms for Buyers</a></li>
+                    <li><a href="legal-pages.html#vendors">Terms for Vendors</a></li>
+                    <li><a href="legal-pages.html#resellers">Terms for Resellers</a></li>
+                    <li><a href="legal-pages.html#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 DropCart Africa. All rights reserved. | <a href="https://bbtechnology.pro">bbtechnology.pro</a></p>
+        </div>
+    </footer>
+
+    <!-- Order Confirmation Modal -->
+    <div id="order-confirmation" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="confirmation-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your order has been submitted!</h3>
+                <p>Your Order ID: <span id="order-id-display"></span></p>
+                <p>We'll contact you shortly to confirm your order details.</p>
+                <button class="btn btn-primary close-confirmation">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Registration Confirmation Modal -->
+    <div id="vendor-confirmation" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="confirmation-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>Your vendor application has been submitted!</h3>
+                <p>Application ID: <span id="vendor-id-display"></span></p>
+                <p>Our team will review your application and contact you within 48 hours.</p>
+                <button class="btn btn-primary close-confirmation">Back to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="login-form-container">
+                <h2>Login to Your Account</h2>
+                <div class="login-tabs">
+                    <button class="login-tab-btn active" data-tab="login">Login</button>
+                    <button class="login-tab-btn" data-tab="register">Register</button>
+                </div>
+                <div class="login-tab-content active" id="login-tab">
+                    <form id="login-form" onsubmit="authManager.handleLogin(event)">
+                        <div class="form-group">
+                            <label for="login-email">Email or Phone</label>
+                            <input type="text" id="login-email" name="login-email" placeholder="Enter email or phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" name="login-password" required>
+                            <span class="password-toggle" onclick="authManager.togglePassword('login-password')"><i class="fas fa-eye"></i></span>
+                        </div>
+                        <div class="form-group captcha-container">
+                            <label>Human Verification</label>
+                            <div class="captcha">
+                                <div class="captcha-display" id="login-captcha-display">A3B7K</div>
+                                <button type="button" class="captcha-refresh" onclick="authManager.refreshCaptcha('login-captcha-display')">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                            </div>
+                            <input type="text" id="login-captcha-input" placeholder="Enter CAPTCHA" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                        <div class="form-links">
+                            <a href="#" id="forgot-password-link">Forgot Password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="login-tab-content" id="register-tab">
+                    <form id="register-form" onsubmit="authManager.handleRegister(event)">
+                        <div class="form-group">
+                            <label for="register-name">Full Name</label>
+                            <input type="text" id="register-name" name="register-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email">Email Address</label>
+                            <input type="email" id="register-email" name="register-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-phone">Phone Number</label>
+                            <input type="tel" id="register-phone" name="register-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <input type="password" id="register-password" name="register-password" required>
+                            <span class="password-toggle" onclick="authManager.togglePassword('register-password')"><i class="fas fa-eye"></i></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-confirm-password">Confirm Password</label>
+                            <input type="password" id="register-confirm-password" name="register-confirm-password" required>
+                        </div>
+                        <div class="form-group captcha-container">
+                            <label>Human Verification</label>
+                            <div class="captcha">
+                                <div class="captcha-display" id="register-captcha-display">XYZ123</div>
+                                <button type="button" class="captcha-refresh" onclick="authManager.refreshCaptcha('register-captcha-display')">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                            </div>
+                            <input type="text" id="register-captcha-input" placeholder="Enter CAPTCHA" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="login-tab-content" id="forgot-password-tab">
+                    <form id="forgot-password-form" onsubmit="authManager.handleForgotPassword(event)">
+                        <div class="form-group">
+                            <label for="forgot-email">Email Address</label>
+                            <input type="email" id="forgot-email" name="forgot-email" required>
+                        </div>
+                        <div class="form-group captcha-container">
+                            <label>Human Verification</label>
+                            <div class="captcha">
+                                <div class="captcha-display" id="forgot-captcha-display">XYZ123</div>
+                                <button type="button" class="captcha-refresh" onclick="authManager.refreshCaptcha('forgot-captcha-display')">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                            </div>
+                            <input type="text" id="forgot-captcha-input" placeholder="Enter CAPTCHA" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Reset Password</button>
+                        </div>
+                        <div class="form-links">
+                            <a href="#" id="back-to-login-link">Back to Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp CTA Button -->
+    <div class="whatsapp-cta">
+        <a href="https://wa.me/+2347031031130" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat Us Now</span>
+        </a>
+    </div>
+
+    <!-- OTP Verification Modal -->
+    <div id="otpModal" class="modal otp-modal">
+        <div class="modal-content">
+            <span class="close" onclick="authManager.closeOtpModal()">&times;</span>
+            <div class="otp-verification">
+                <h2>Verify Your Account</h2>
+                <p id="otp-message">We've sent a 6-digit verification code to your email/phone.</p>
+                <div class="otp-input-container">
+                    <input type="text" id="otp-input" placeholder="Enter 6-digit code" maxlength="6" pattern="[0-9]{6}">
+                </div>
+                <div class="otp-actions">
+                    <button type="button" class="btn btn-primary" onclick="authManager.verifyOtp()">Verify</button>
+                    <button type="button" class="btn btn-secondary" onclick="authManager.resendOtp()">Resend Code</button>
+                </div>
+                <div class="otp-timer" id="otp-timer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="js/testimonials.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
